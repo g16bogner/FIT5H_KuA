@@ -25,10 +25,25 @@ cat > <dateiname>
 Links
 	Hardlink
 		ln <dateiname> <dateiname-lnk>
-			erzeugt eine neue Referenz auf eine Datei in der File-Tabelle der Festplatte
+			erzeugt eine neue Referenz auf eine Datei in der File-Tabelle der Festplatte. Jede Datei hat mindestens einen Hardlink.
 
 	Softlink
 		ln -s <verzeichnisname> <verzeichnisname-neu>
 			Da Hardlinks nur für Dateien möglich sind, gibt es den Softlink für Verzeichnisse.
 			Es wird eine neue Datei erstellt, deren Inhalt der Verweis auf das Verzeichnis ist
+
+Variablen
+	Definition:
+		Variablenname aus Buchstaben, keine Zahlen als 1. Buchstaben, keine Sonderzeichen, dann Zuweisungsoperator ohne Leerzeichen, dann Wert
+			var="Zeichenkette"
+	Verwendung:
+		$ + Variablenname
+			echo $var
+
+Kommandosubstitution mit Backticks
+	var=`ls`
+		speichert in der Variable var die Ausgabe des Befehls
+
+	echo $var
+		gibt das Ergebnis des Befehls aus
 
