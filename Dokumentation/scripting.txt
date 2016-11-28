@@ -70,11 +70,6 @@ Schleifen:
 	        echo $eingabe
 	done
 
-	array=( eins zwei drei )
-	for i in "${array[@]}"
-	do
-		echo $i
-	done
 
 
 Operatoren
