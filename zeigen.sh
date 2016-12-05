@@ -1,33 +1,15 @@
 #!/bin/bash
 
-read -p "Geben Sie die 1. Zahl ein:" zahl1
 
-if [[ `echo "$zahl1" | grep [[:digit:]]` ]]
+if [[ -z $1 ]] #erster Parameter es wird geprüft ob ein Paramter übergeben wurde
 	then
-	echo "Die 1. Zahl ist eine $zahl1"
-
-else
-	echo "Falsche Eingabe"
+	echo "Sie haben keinen Ziel-Ordner angeben."	
+else 
+	topic=$1
+	datum=$(date +"%d.%m.%Y %H:%M")
+	read -p "Notiz: " notiz
+	dir="$HOME/$topic"
+	file="$dir/notes.txt"				
+	mkdir -p $dir
+	printf "$datum: $notiz \n" >> $file 			
 fi
-
-ergebnis=zahl1
-zaehler=1
-
-read -p "Geben Sie eine weitere Zahl ein, oder beenden Sie mit exit: " eingabe
-
-while [[ $eingabe -ne "exit" ]]
-do
-	((zaehler ++))
-	ergebnis=$((ergebnis+eingabe))
-	echo "Bisher wurden $zaehler Zahlen eingegeben. Das Zwischenergebnis lautet: $ergebnis."
-	
-	read -p "Geben Sie eine weitere Zahl ein, oder beenden Sie mit exit. " eingabe
-	
-	if [[ ! `echo "$eingabe" | grep [[:digit:]]` ]]
-	then
-		echo "Falsche Eingabe!"
-	fi
-done
-
-
-	echo "Das Endergebnis lautet: $ergebnis"	
