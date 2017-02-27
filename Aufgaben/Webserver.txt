@@ -1,0 +1,11 @@
+1. Kopieren Sie oder legen Sie eine neue virtuelle Maschine an, nutzen Sie Ubuntu 16.04. Der Admin-User heißt theo.
+2.a Installieren Sie SSH, erstellen eine direkte Verbindung zwischen Client und Server, über einen Austausch des privaten User-Schlüssels Ihres Desktoprechners.
+3.b Legen Sie einen neuen Benutzer webadmin an, der die sudo-Berechtigungen bekommt. Deaktivieren Sie den Zugriff auf Root von einem externen Rechner.
+4.a Installieren Sie den Apache Webserver und einen konsolenbasierten Browser.
+4.b Testen Sie den Webserver mit einem Browseraufruf
+4.c Installieren Sie das php-Modul des Webservers und aktivieren es
+4.d Legen Sie eine Seite an um die php-Installation zu testen und rufen Sie die Seite mit lynx auf
+5.a Erstellen Sie für den Webserver einen VirtuellenHost mit dem Namen sommer und legen dort eine index.php mit einer Ausgabe 'Hallo Sommer' an. Veranlassen Sie einen Reload des Webservers
+5.b Wiederholen Sie den Prozess mit winter und 'Hallo Winter'
+5.c. Die Seite winter.ihr_server_name.local (bzw. sommer ...) soll sowohl von der Konsole mit lynx,als auch von Ihrem Desktoprechner erreichbar sein. Nehmen Sie die entsprechenden Konfigurationen vor.
+6. Optional in Vorbereitung des nächsten Steps: recherchieren Sie wie Sie einen eigenen GIT-Server konfigurieren können.
